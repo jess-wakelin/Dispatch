@@ -2,6 +2,7 @@
   <div>
     <div class="tab-bar">
       <button
+        type="button"
         v-for="(tab, i) in tabs"
         :key="i"
         @click.self="selectTab(i)"
@@ -13,7 +14,14 @@
         </div>
       </button>
 
-      <button v-show="this.dynamic" @click="createTab()" class="add">+</button>
+      <button
+        type="button"
+        v-show="this.dynamic"
+        @click="createTab()"
+        class="add"
+      >
+        +
+      </button>
     </div>
 
     <div
