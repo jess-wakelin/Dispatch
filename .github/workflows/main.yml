@@ -1,0 +1,20 @@
+name: Build Vue
+on:   
+  # Triggers the workflow on push request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+    
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  build_vue:
+    runs-on: ubuntu-latest
+    name: Build Vue
+    steps:
+    - uses: actions/checkout@v2
+    - id: Build-Vue
+      uses: xRealNeon/VuePagesAction@1.0.1
+      with:
+        username: 'jess-wakelin'
+        reponame: 'Dispatch'
+        token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
