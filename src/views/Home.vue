@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <img alt="dispatch logo" src="../assets/dispatchLogo.svg" height="200" />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <TabSystem :default-title="`New Request`">
       <APIPanel></APIPanel>
